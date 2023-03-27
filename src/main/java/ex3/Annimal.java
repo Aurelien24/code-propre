@@ -2,14 +2,15 @@ package ex3;
 
 import java.util.List;
 
-public class Zoo {
+/** Ce n'est pas une Application de Zoo AVEC plein de zoo mais d'annimaux */
+public class Annimal {
 
 	private String nom;
 	private List<String> types;
 	private List<String> noms;
 	private List<String> comportements;
 	
-	public Zoo(String nom){
+	public Annimal(String nom){
 		this.nom = nom;
 	}
 	
