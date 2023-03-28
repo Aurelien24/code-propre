@@ -36,7 +36,7 @@ public class LivretA extends CompteBancaire {
 		this.tauxRemuneration = tauxRemuneration;
 	}
 
-	/** Getter pour accéder au découvert = 0 des livrets A *//
+	/** Getter pour accéder au découvert = 0 des livrets A */
 	public static double getDecouvert() {
 		return decouvert;
 	}
