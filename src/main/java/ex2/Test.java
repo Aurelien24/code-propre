@@ -14,7 +14,6 @@ public class Test {
         System.out.println(compteCourants.getSolde());
         System.out.println(compteCourants.toString(compteCourants.getSolde()));
 
-        //Operation operation = new Operation();
         System.out.println(Operation.ajouterMontant(500.0, livretA.getSolde()));
         livretA.setSolde(Operation.ajouterMontant(500.0, livretA.getSolde()));
         System.out.println(Operation.retraitMontant(500.0, livretA.getSolde(), livretA.getDecouvert()));
