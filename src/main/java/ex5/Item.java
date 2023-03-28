@@ -4,7 +4,16 @@ public class Item {
 
 	private String nom;
 	private int poids;
-	
+
+	/** Constructeur visant a crée un objet item complet
+	 * @param nom
+	 * @param poids
+	 */
+	public Item(String nom, int poids) {
+		this.nom = nom;
+		this.poids = poids;
+	}
+
 	/** Getter pour l'attribut nom
 	 * @return the nom
 	 */

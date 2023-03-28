@@ -9,28 +9,32 @@ public class Inventaire {
 
 	public Inventaire() {
 		caisses = new ArrayList<>();
-		caisses.add(new Caisse("Petits objets"));
-		caisses.add(new Caisse("Moyens objets"));
-		caisses.add(new Caisse("Grands objets"));
+		caisses.add(new Caisse("Petits objets", 0, 5));
+		caisses.add(new Caisse("Moyens objets", 5, 20));
+		caisses.add(new Caisse("Grands objets", 20, 2147483647));
 	}
 
 	public void addItem(Item item) {
 
 		//TODO Faites évoluer ce code (idée: c'est le caisse qui doit "savoir" si elle peut accepter un objet ou non)
-		if (item.getPoids() < 5) {
-			caisses.get(0).getItems().add(item);
-		}
-		if (item.getPoids() >= 5 && item.getPoids() <= 20) {
-			caisses.get(1).getItems().add(item);
-		}
-		if (item.getPoids() >= 20) {
-			caisses.get(2).getItems().add(item);
+		/** Je laisse un if pour savoir si il y as besoin de continuer la boucle.
+		 * Il n'y as acctuellement que 3 Caisse mais, peut il y en avoir 10 ? 1000 ? 100 000?
+		 */
+		for (Caisse caisse : caisses){
+			if (caisse.addItem(item)){
+				break;
+			}
 		}
 	}
 
 	public int taille() {
 		
 		//TODO faites évoluer ce code.
-		return caisses.get(0).getItems().size() + caisses.get(1).getItems().size() + caisses.get(2).getItems().size();
+		/** Le code s'adapte au nombre de caisses pour renvoyé le résultat total d'objet. */
+		int taille = 0;
+		for (int i = 0; i < caisses.size() ; i++){
+			taille = taille + caisses.get(i).getItems().size();
+		}
+		return taille;
 	}
 }
