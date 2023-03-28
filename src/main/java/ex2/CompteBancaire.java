@@ -7,6 +7,7 @@ package ex2;
 public abstract class CompteBancaire {
 
 	private double solde;
+	private int decouvert;
 
 	public CompteBancaire(double solde) {
 		this.solde = solde;

@@ -6,13 +6,17 @@ public class LivretA extends CompteBancaire {
 	/** Permet d'avoir le taux de rémunération */
 	private double tauxRemuneration;
 
+	/** Permet de s'assuret que le livret a n'ai pas droit a un découvert */
+	static private double decouvert = 0;
+
 	/** L'objet Livret A demande
 	 * @param solde
 	 */
-	public LivretA(double solde) {
+	public LivretA(double solde, double tauxRemuneration) {
 
 		super(solde);
 		this.tauxRemuneration = tauxRemuneration;
+		decouvert = 0;
 	}
 
 	/** La rénumération annuel d'un Livret A se calcule ici */
@@ -30,6 +34,11 @@ public class LivretA extends CompteBancaire {
 	/** Permet de maudifier le taux de rémunération */
 	public void setTauxRemuneration(double tauxRemuneration) {
 		this.tauxRemuneration = tauxRemuneration;
+	}
+
+	/** Getter pour accéder au découvert = 0 des livrets A *//
+	public static double getDecouvert() {
+		return decouvert;
 	}
 
 	/** Le to String demande le solde actuel du compte pour en donnée toute les informations. */
