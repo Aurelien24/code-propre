@@ -14,7 +14,7 @@ public abstract class CompteBancaire {
 	}
 
 	/** Permet d'obtenir le solde du compte */
-	public double getSolde(String nomDuCompte) {
+	public double getSolde() {
 		return solde;
 	}
 	

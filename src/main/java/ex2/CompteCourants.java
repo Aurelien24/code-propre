@@ -5,7 +5,7 @@ package ex2;
 public class CompteCourants extends CompteBancaire{
     private double decouvert;
 
-    public CompteCourants(double solde) {
+    public CompteCourants(double solde, int decouvert) {
 
         super(solde);
         this.decouvert = decouvert;

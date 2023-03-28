@@ -7,7 +7,7 @@ public class LivretA extends CompteBancaire {
 	private double tauxRemuneration;
 
 	/** Permet de s'assuret que le livret a n'ai pas droit a un découvert */
-	static private double decouvert = 0;
+	static protected int decouvert = 0;
 
 	/** L'objet Livret A demande
 	 * @param solde
@@ -37,7 +37,7 @@ public class LivretA extends CompteBancaire {
 	}
 
 	/** Getter pour accéder au découvert = 0 des livrets A */
-	public static double getDecouvert() {
+	public static int getDecouvert() {
 		return decouvert;
 	}
 
